@@ -38,15 +38,15 @@ def comparator(image):
     
     return keypoints
 
-def normalize(input_test):
-	for k in range(0,17):	
-		input_test[:,k] = input_test[:,k]/np.linalg.norm(input_test[:,k])	
-	return input_test
+def normalize(image):
+    image *= 255.0/image.max()
+
+    return image
 
 def cosineSimilarity(inputs, source):
 
-        #inputs = normalize(inputs)
-        #source = normalize(source)
+        inputs = normalize(inputs.copy())
+        source = normalize(source.copy())
 
         print("inputs")
         print(inputs.shape)
