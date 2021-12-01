@@ -89,7 +89,7 @@ def comparePose(request):
 
                 score = cosineSimilarity(input_new_coords, saved_profile)
 
-                if score >= 70:
+                if score >= 95:
                     return Response({"message":"same"}, status=status.HTTP_200_OK)
                 else:
                     return Response({"message":"diff"}, status=status.HTTP_200_OK)
