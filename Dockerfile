@@ -11,7 +11,8 @@ ENV PYTHONUNBUFFERED=1
 
 # Install pip requirements
 COPY requirements.txt .
-RUN apt-get update && apt-get install -y python3-opencv
+RUN apt-get update
+RUN apt-get install ffmpeg libsm6 libxext6  -y
 RUN python -m pip install -r requirements.txt
 
 WORKDIR /app
