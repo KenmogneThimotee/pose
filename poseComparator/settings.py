@@ -126,4 +126,4 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-PATH_SOURCE = "gs://posecomparator/sources/image.npy"
+PATH_SOURCE = "https://posecomparator.storage.googleapis.com/sources/image.npy"
