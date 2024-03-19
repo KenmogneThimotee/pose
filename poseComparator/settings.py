@@ -127,3 +127,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 PATH_SOURCE = "source/image.npy"
+SESSION_COOKIE_SECURE = True
